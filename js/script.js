@@ -8,7 +8,7 @@ const addGuestButton = document.querySelector(".invite");
 addGuestButton.addEventListener("click", function(){
     const guest = guestInput.value;
     // console.log (guest);
-    if (guest !== " ") {
+    if (guest !== "") {
         addToList(guest);
     }
     clearInput();
@@ -16,7 +16,7 @@ addGuestButton.addEventListener("click", function(){
 });
 
 const clearInput = function() {
-    guestInput.value = " ";
+    guestInput.value = "";
 };
 
 const addToList = function (guest){
@@ -42,7 +42,7 @@ const updateGuestCount = function (){
     guestCount.innerText = guests.length; 
     if (guests.length === 8) {
         addGuestButton.classList.add("hide");
-        guestInputLabel.classList.add("hide");
+        guestInput.classList.add("hide");
         guestFull.classList.remove("hide");
     }
 };
